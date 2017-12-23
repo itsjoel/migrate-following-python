@@ -1,7 +1,16 @@
 # Migrate Twitter "Friends"
+
 A repository for migrating the list of people you follow (friends) from one account to another.
 
+---
+
 **Note: For some reason twitter calls people who you follow "Friends" so I'll do that too.**
+
+**Also Note: Twitter works in mysterious ways. I honestly have no idea what the risks are of following too many people too quickly. For me, they just seem to be that I have to wait a bit to follow more people, but idk.**
+
+**⚠ USE AT YOUR OWN RISK ⚠**
+
+---
 
 ## Setup
 0. Clone this repo to your computer and stuff.
