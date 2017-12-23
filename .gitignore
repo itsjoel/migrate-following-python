@@ -104,7 +104,7 @@ ENV/
 .vscode/
 
 #output
-output/
+output/*
 
 #secrets
 secrets.ini

@@ -83,8 +83,7 @@ def get_list_of_friends(target_id):
         ids.append(friend)
     return ids
 
-
-TARGET = API.get_user(input("Target Username (who we'll be copying from): "))
+TARGET = input("Target Username (who we'll be copying from): ")
 
 print("Getting List of Friends (Following) of Target...")
 TARGET_FRIEND_IDS = get_list_of_friends(TARGET)
@@ -100,7 +99,7 @@ print("Getting List of Your Friends (Following)...")
 YOUR_FRIEND_IDS = get_list_of_friends(API.me().id)
 
 print("Converting IDs to names...")
-YOUR_FRIEND_IDS = get_usernames(YOUR_FRIEND_IDS)
+YOUR_FRIEND_NAMES = get_usernames(YOUR_FRIEND_IDS)
 
 print("Saving to CSV...")
 two_lists_to_csv(YOUR_FRIEND_IDS, YOUR_FRIEND_IDS, "./output/yourfriends.csv")
@@ -109,7 +108,7 @@ print("Subtracting who you've already followed...")
 DIFF_FRIEND_IDS = [f for f in TARGET_FRIEND_IDS if f not in YOUR_FRIEND_IDS]
 
 print("Converting ids to names...")
-DIFF_FRIEND_NAMES = get_usernames(YOUR_FRIEND_IDS)
+DIFF_FRIEND_NAMES = get_usernames(DIFF_FRIEND_IDS)
 
 print("Saving to CSV...")
 two_lists_to_csv(DIFF_FRIEND_IDS, DIFF_FRIEND_NAMES, "./output/diffriends.csv")
